@@ -1,0 +1,104 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Full-screen background */
+html, body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  font-family: 'Arial', sans-serif;
+  color: #0f0;
+}
+
+/* Centered container with neon effect */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+  padding: 25px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.7);  /* Glassmorphism effect */
+  box-shadow: 0 0 20px #0f0;
+  text-align: center;
+  border: 2px solid #0f0;
+}
+
+/* Heading styles */
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+/* Label */
+label {
+  font-size: 16px;
+  margin: 10px 0 5px;
+}
+
+/* Dropdown (Peer Selection) */
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 2px solid #0f0;
+  background: black;
+  color: #0f0;
+  font-size: 14px;
+  outline: none;
+}
+
+/* File input */
+input[type="file"] {
+  display: none;
+}
+
+/* Custom file input button */
+.file-upload {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #0f0;
+  background: black;
+  color: #0f0;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+/* File input hover effect */
+.file-upload:hover {
+  background: #0f0;
+  color: black;
+}
+
+/* Send File button */
+button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #0f0;
+  background: black;
+  color: #0f0;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Button hover effect */
+button:hover {
+  background: #0f0;
+  color: black;
+}
