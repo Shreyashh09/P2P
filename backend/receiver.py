@@ -1,5 +1,6 @@
 import socket
 
+
 HOST = "0.0.0.0"  # Accept connections from any device in LAN
 PORT = 5001       # Choose any available port
 

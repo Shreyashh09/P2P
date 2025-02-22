@@ -8,8 +8,9 @@ export default function FileShareApp() {
   useEffect(() => {
     const fetchPeers = async () => {
       try {
-        const response = await fetch("192.168.1.7:5000/peers");
+        const response = await fetch(`http://${window.location.hostname}:5000/peers`);
         const data = await response.json();
+        console.log("Fetched Peers:", data);
         setPeers(data);
       } catch (error) {
         console.error("Error fetching peers:", error);
@@ -36,7 +37,7 @@ export default function FileShareApp() {
     formData.append("receiver_ip", selectedPeer);
 
     try {
-      const response = await fetch("192.168.1.7:5000/send", {
+      const response = await fetch(`http://${window.location.hostname}:5000/send`, {
         method: "POST",
         body: formData,
       });
@@ -57,15 +58,23 @@ export default function FileShareApp() {
       <h1>LAN File Sharing</h1>
 
       <label>Select a Peer:</label>
-      <select onChange={(e) => setSelectedPeer(e.target.value)}>
+      <select value={selectedPeer} onChange={(e) => setSelectedPeer(e.target.value)}>
         <option value="">Select a Device</option>
         {peers.map((peer, index) => (
           <option key={index} value={peer}>{peer}</option>
         ))}
       </select>
 
-      <input type="file" onChange={handleFileChange} />
-      <button onClick={sendFile}>Send File</button>
+      {/* File Input */}
+      <label className="file-upload">
+        {selectedFile ? selectedFile.name : "Choose a file"}
+        <input type="file" onChange={handleFileChange} />
+      </label>
+
+      {/* Disable button if no file or peer is selected */}
+      <button onClick={sendFile} disabled={!selectedFile || !selectedPeer}>
+        Send File
+      </button>
     </div>
   );
 }

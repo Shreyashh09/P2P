@@ -102,3 +102,29 @@ button:hover {
   background: #0f0;
   color: black;
 }
+
+
+/* Custom file input */
+.file-upload {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #0f0;
+  background: black;
+  color: #0f0;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.file-upload input {
+  display: none;
+}
+
+/* Disable send button if conditions are not met */
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
