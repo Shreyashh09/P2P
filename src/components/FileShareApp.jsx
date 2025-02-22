@@ -111,7 +111,8 @@ const FileShareApp = () => {
       className="min-h-screen min-w-[2000px] relative flex items-center justify-center p-4 bg-cover bg-center bg-no-repeat"
       style={{
         // backgroundImage: 'url("https://api.deepai.org/job-view-file/641d3444-7deb-4483-aa12-50e8417b85d7/outputs/output.jpg")',
-        backgroundImage: 'url("https://api.deepai.org/job-view-file/71a692ac-c91a-483b-bb45-441c4abec975/outputs/output.jpg")',
+        backgroundImage: 'url("/background.jpg")',
+        
         // backgroundImage: 'url("https://api.deepai.org/job-view-file/0f9d32c6-58e0-4176-b436-9517d60c7da6/outputs/output.jpg")',
         // backgroundImage: 'url("https://api.deepai.org/job-view-file/3c1f30b2-63d5-41ba-a51a-e704236a61a6/outputs/output.jpg")',
         // backgroundImage: 'url("https://api.deepai.org/job-view-file/f32c7302-211e-4015-8c0b-3aab5b61bed0/outputs/output.jpg")',
@@ -121,7 +122,7 @@ const FileShareApp = () => {
       <div className="absolute inset-0 backdrop-blur-sm bg-black/50" />
       
       {/* Main content */}
-      <div className="relative w-full max-w-md bg-gray-800/90 rounded-xl shadow-2xl p-6 border border-green-500/30 backdrop-blur-sm">
+      <div className="relative w-full max-w-md bg-gray-800/90 rounded-xl p-6 border-2 border-green-500/100 backdrop-blur-sm shadow-[0_0_10px_5px_rgba(72, 255, 0, 0.7)]">
         <div className="mb-6">
           <h1 className="text-2xl font-mono font-bold text-center flex items-center justify-center gap-2 text-green-400">
             <Upload className="w-6 h-6" />
@@ -165,9 +166,9 @@ const FileShareApp = () => {
                 e.stopPropagation();
                 clearFile();
               }}
-              className="absolute top-2 right-2 p-1 bg-gray-700/90 rounded-full hover:bg-gray-600"
+              className="absolute top-[0.25rem] left-1 p-[0.25rem] bg-gray-700/90 rounded-full hover:bg-gray-600"
             >
-              <X className="w-4 h-4 text-green-400" />
+              <X className="w-7 h-4 text-green-400" />
             </button>
           )}
           
