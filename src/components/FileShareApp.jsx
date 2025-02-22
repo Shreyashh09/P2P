@@ -108,7 +108,7 @@ const FileShareApp = () => {
 
   return (
     <div 
-      className="min-h-screen min-w-[1390px] relative flex items-center justify-center p-4 bg-cover bg-center bg-no-repeat"
+      className="min-h-screen min-w-[1540px] relative flex items-center justify-center p-4 bg-cover bg-center bg-no-repeat"
       style={{
         // backgroundImage: 'url("https://api.deepai.org/job-view-file/641d3444-7deb-4483-aa12-50e8417b85d7/outputs/output.jpg")',
         backgroundImage: 'url("/background.jpg")',
